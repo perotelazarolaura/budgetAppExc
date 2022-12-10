@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget Tracker App</title>
+  <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Unir las hojas de estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h1 class="mainTitles" id="controlG">Control de gastos</h1>
+    </header>
+
+    <div>
+        <h3 class="mainTitles" id="tuAhorro">TU AHORRO</h3>
+        <span id="balanceTotal">00.0€</span>
+    </div>
+    
+    <div id="grid-row">
+        <div class="cell">INGRESO
+            <div><span id="ingresosTotales">0.00€</span></div>
+        </div> 
+        <div class="cell">GASTO
+            <div> <span id="gasotsTotales">0.00€</span></div>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="mainTitles" id="conSubt">Historial</h1>
+        <div class="list-container" id="list">
+            <table class = "hide" id="hiddenTable">
+                <tr>
+                    <th>Concepto</th>
+                    <th>Cantidad</th>
+                </tr>
+            </table>
+
+        </div>>
+    </div>
+
+    <div>
+        <h1 class="mainTitles" id="conSubt">Añadir nueva transacción</h1>
+    </div>
+
+    <form>
+        <div>
+            <p>
+                <label class="titulo">Concepto</label>
+            </p>
+            <p class="hide error" id="errorConcepto">
+                Este campo no puede estar vacío
+            </p>
+            <p><input class="campoInp" id = "concepoInput" name="concept" type="text" placeholder="Añade concepto..."></p>
+   
+ 
+            <p>
+                <label class="titulo">Cantidad
+                (negativo - gasto, positivo - ingreso)</label>
+            </p>
+
+            <p class="hide error" id="errorPresupuesto">
+                Este campo no puede estar vacío
+            </p>
+            <p><input id="gastoInput" class="campoInp" type="number" placeholder="Introduce cantidad..."></p>
+ 
+            <p>
+                <button type='button' id="button-save" class="buttonSave">Añadir transacción</button>
+            </p>
+        </div>
+ 
+    </form>
+
+</body>
+
+</html>
+<script src="budgetApp.js"></script>
